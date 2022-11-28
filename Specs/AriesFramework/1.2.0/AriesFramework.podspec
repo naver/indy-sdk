@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.source_files = "AriesFramework/AriesFramework/**/*.{h,swift}"
 
   spec.dependency   "Indy", "1.16.2"
-  spec.dependency   "BigInt", "~> 5.2"
+  spec.dependency   "Base58Swift", "~> 2.1"
   spec.dependency   "WebSockets", "~> 0.5.0"
   spec.dependency   "CollectionConcurrencyKit", "~> 0.2.0"
   spec.static_framework        = true
