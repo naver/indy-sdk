@@ -20,6 +20,8 @@ if [ ! -d "${OPENSSL_DIR}" ]; then
   exit 1
 fi
 
+rustup target add aarch64-apple-ios x86_64-apple-ios aarch64-apple-ios-sim
+
 echo "Build IOS xcframework started..."
 
 cd ${package}
@@ -43,9 +45,8 @@ function copy_target() {
 }
 
 echo -e "\nBuilding libraries..."
-cargo build --$TYPE --target "aarch64-apple-ios"
+cargo build --$TYPE --target aarch64-apple-ios
 copy_target "aarch64-apple-ios"
-cargo build --$TYPE --target "aarch64-apple-ios"
 CFLAGS_aarch64_apple_ios_sim="-target arm64-apple-ios7.0.0-simulator" cargo build --$TYPE --target aarch64-apple-ios-sim
 copy_target "aarch64-apple-ios-sim"
 CFLAGS_x86_64_apple_ios_sim="-target x86_64-apple-ios" cargo build --$TYPE --target x86_64-apple-ios
