@@ -1,0 +1,22 @@
+{
+  "name": "libindy",
+  "version": "1.16.1",
+  "summary": "libindy linked to openssl 1.1",
+  "description": "Description TODO.",
+  "homepage": "TODO",
+  "license": {
+    "type": "Apache License 2.0",
+    "file": "LICENSE"
+  },
+  "authors": {
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "http": "https://github.com/naver/indy-sdk/releases/download/v1.16.1/libindy.tar.gz"
+  },
+  "source_files": "*.h",
+  "vendored_libraries": "*.a",
+  "requires_arc": false
+}

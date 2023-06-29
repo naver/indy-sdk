@@ -1,7 +1,7 @@
 # Temporary podspec in the fork
 Pod::Spec.new do |spec|
   spec.name     = 'Indy'
-  spec.version  = '1.16.2'
+  spec.version  = '1.16.3'
   spec.license  =  'Apache License 2.0'
   spec.homepage = 'https://github.com/hyperledger/indy-sdk'
   spec.authors  = {'Hyperledger Indy Contributors' => 'hyperledger-indy@lists.hyperledger.org'}
@@ -22,6 +22,6 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
   spec.dependency   'libsodium'
   spec.dependency   'libzmq', '4.2.3'
-  spec.dependency   'OpenSSL-Universal', '~> 1.0.2'
-  spec.dependency   'libindy', '1.16.0'
+  spec.dependency   'OpenSSL-Universal', '~> 1.1.0'
+  spec.dependency   'libindy', '1.16.1'
 end
